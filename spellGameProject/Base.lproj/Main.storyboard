@@ -72,6 +72,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MGZ-Hh-JbZ">
+                                <rect key="frame" x="0.0" y="4" width="375" height="43"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U0d-8H-3Tj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-Or-kYh">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="43"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ydR-04-zMy">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="43"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -80,8 +96,12 @@
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="2NG-Y4-lqc" secondAttribute="trailing" id="4w0-80-NsN"/>
                             <constraint firstItem="2NG-Y4-lqc" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="HOM-kt-PbB"/>
                             <constraint firstItem="dQz-ln-cIm" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="PgL-1f-h9r"/>
+                            <constraint firstItem="MGZ-Hh-JbZ" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="cWD-xA-ktu"/>
+                            <constraint firstItem="MGZ-Hh-JbZ" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="4" id="dQW-55-RpQ"/>
                             <constraint firstItem="dQz-ln-cIm" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="51" id="hL6-Dv-dhZ"/>
+                            <constraint firstItem="dQz-ln-cIm" firstAttribute="top" secondItem="MGZ-Hh-JbZ" secondAttribute="bottom" constant="4" id="q6X-XO-VSK"/>
                             <constraint firstItem="2NG-Y4-lqc" firstAttribute="top" secondItem="dQz-ln-cIm" secondAttribute="bottom" constant="8" id="uWD-t2-ug9"/>
+                            <constraint firstItem="MGZ-Hh-JbZ" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="wAq-HC-hfE"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="2NG-Y4-lqc" secondAttribute="bottom" id="x7a-tO-jKs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
