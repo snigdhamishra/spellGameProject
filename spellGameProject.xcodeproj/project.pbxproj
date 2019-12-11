@@ -15,6 +15,7 @@
 		458374C62399940900E4B4A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458374C42399940900E4B4A7 /* Main.storyboard */; };
 		458374C82399940A00E4B4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458374C72399940A00E4B4A7 /* Assets.xcassets */; };
 		458374CB2399940A00E4B4A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458374C92399940A00E4B4A7 /* LaunchScreen.storyboard */; };
+		45860DA8239EE500004D56DC /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45860DA7239EE500004D56DC /* Characters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		458374C72399940A00E4B4A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458374CA2399940A00E4B4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458374CC2399940A00E4B4A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45860DA7239EE500004D56DC /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				458374BE2399940900E4B4A7 /* Actions.sks */,
 				458374C02399940900E4B4A7 /* GameScene.swift */,
 				458374C22399940900E4B4A7 /* GameViewController.swift */,
+				45860DA7239EE500004D56DC /* Characters.swift */,
 				458374C42399940900E4B4A7 /* Main.storyboard */,
 				458374C72399940A00E4B4A7 /* Assets.xcassets */,
 				458374C92399940A00E4B4A7 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				458374C12399940900E4B4A7 /* GameScene.swift in Sources */,
 				458374C32399940900E4B4A7 /* GameViewController.swift in Sources */,
 				458374BB2399940900E4B4A7 /* AppDelegate.swift in Sources */,
+				45860DA8239EE500004D56DC /* Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
