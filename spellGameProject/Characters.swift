@@ -11,19 +11,29 @@ import Foundation
 class Character {
     var health: Int
     var energy: Int
-    var attackPower: [String: Int]
+    var attackDamage: Int
     
-    init( health: Int, energy: Int, attackPower: [String: Int]) {
+    init( health: Int, energy: Int, attackDamage: Int) {
         self.health = health
         self.energy = energy
-        self.attackPower = attackPower
+        self.attackDamage = attackDamage
     }
 }
 
 class Hero: Character {
     
+    init(health: Int, energy: Int) {
+        super.init(health: 100, energy: 100, attackDamage: 10)
+        
+    }
 }
 
 class Enemy: Character {
+    
+    
+    init(health: Int, energy: Int) {
+       super.init(health: 100, energy: 100, attackDamage: 10)
+        
+    }
     
 }
