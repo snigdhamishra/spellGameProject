@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,12 +13,12 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="spellGameProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MGZ-Hh-JbZ" userLabel="Upper">
-                                <rect key="frame" x="0.0" y="24" width="375" height="43"/>
+                                <rect key="frame" x="0.0" y="4" width="375" height="43"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-Jj-CS2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -73,7 +71,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dQz-ln-cIm" userLabel="Middle">
-                                <rect key="frame" x="0.0" y="71" width="375" height="341"/>
+                                <rect key="frame" x="0.0" y="51" width="375" height="341"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h0J-X4-C1I">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="341"/>
@@ -81,13 +79,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gBb-fp-uXI">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="341"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-6R-kti">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-6R-kti">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="341"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-JZ-PK5">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-JZ-PK5">
                                                         <rect key="frame" x="125" y="0.0" width="125" height="341"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Mq-RP-IqK">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character2" translatesAutoresizingMaskIntoConstraints="NO" id="2Mq-RP-IqK">
                                                         <rect key="frame" x="250" y="0.0" width="125" height="341"/>
                                                     </imageView>
                                                 </subviews>
@@ -100,7 +98,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Y4-lqc" userLabel="Lower">
-                                <rect key="frame" x="0.0" y="420" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="400" width="375" height="267"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-y5-Zx2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
@@ -108,6 +106,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="Vsd-xW-kJE">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcj-Er-iKI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <rect key="contentStretch" x="1" y="1" width="0.90000000000000002" height="1"/>
                                                 <viewLayoutGuide key="safeArea" id="TB9-4m-Haj"/>
                                             </stackView>
@@ -119,9 +125,8 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
-                                                        <state key="normal" title="Fire" backgroundImage="fire">
-                                                            <color key="titleColor" red="0.91982740163803101" green="0.32419365644454956" blue="0.26601603627204895" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Fire" backgroundImage="download">
+                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="spell1:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lar-7h-qzk"/>
@@ -132,8 +137,8 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
-                                                        <state key="normal" title="Water" backgroundImage="water">
-                                                            <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Water" backgroundImage="download">
+                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="spell2:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1FW-Rq-h8Z"/>
@@ -148,14 +153,18 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="Afi-GB-4d6">
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Healing" backgroundImage="healing"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="Healing" backgroundImage="download">
+                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="spell3:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nIv-Hs-6cM"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haU-z2-qW5">
                                                         <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
-                                                        <state key="normal" title="Earth" backgroundImage="earth"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="Earth" backgroundImage="download"/>
                                                         <connections>
                                                             <action selector="spell4:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UZw-Gl-42u"/>
                                                         </connections>
@@ -185,10 +194,12 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
+                        <outlet property="effect" destination="Ocs-JZ-PK5" id="SdV-Uq-aVS"/>
                         <outlet property="enemyEnergy" destination="a1L-8W-tF1" id="vXj-xL-j86"/>
                         <outlet property="enemyHealth" destination="iPY-MW-Nb4" id="xAZ-zk-p4f"/>
                         <outlet property="playerEnergy" destination="mft-Dh-J4b" id="zeE-wE-Oin"/>
                         <outlet property="playerHealth" destination="0BV-2p-pKP" id="5LR-7H-YPJ"/>
+                        <outlet property="turnDescription" destination="dcj-Er-iKI" id="giE-cn-40J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -219,9 +230,8 @@
     </scenes>
     <resources>
         <image name="character1" width="1920" height="1080"/>
-        <image name="earth" width="600" height="575"/>
-        <image name="fire" width="512" height="512"/>
-        <image name="healing" width="225" height="225"/>
+        <image name="character2" width="1920" height="1080"/>
+        <image name="download" width="275" height="183"/>
         <image name="water" width="400" height="700"/>
     </resources>
 </document>

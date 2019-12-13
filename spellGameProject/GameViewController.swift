@@ -11,8 +11,10 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    @IBOutlet var effect: UIImageView!
     @IBOutlet var playerHealth: UILabel!
     @IBOutlet var playerEnergy: UILabel!
+    @IBOutlet var turnDescription: UILabel!
     @IBOutlet var enemyHealth: UILabel!
     @IBOutlet var enemyEnergy: UILabel!
     var enemy = Enemy(health: 100, energy: 100)
@@ -104,4 +106,5 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
 }
