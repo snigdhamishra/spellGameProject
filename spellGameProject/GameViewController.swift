@@ -50,6 +50,7 @@ class GameViewController: UIViewController {
         {
             enemy.health -= 10
             player.energy -= 30
+            effect.image = UIImage(named: "earth")
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -62,6 +63,7 @@ class GameViewController: UIViewController {
         {
             enemy.health -= damage
             player.energy -= 15
+            effect.image = UIImage(named: "water")
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -74,6 +76,7 @@ class GameViewController: UIViewController {
         {
             enemy.health -= damage
             player.energy -= 100
+            effect.image = UIImage(named: "alphacChadMove")
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -81,10 +84,12 @@ class GameViewController: UIViewController {
         enemyEnergy.text = "\(enemy.energy)"
     }
     @IBAction func spell4(_ sender: Any) {
+        
         if (player.energy > 0)
         {
             player.health += 10
             player.energy -= 20
+            effect.image = UIImage(named: "healing")
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"

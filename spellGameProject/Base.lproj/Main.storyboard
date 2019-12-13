@@ -82,7 +82,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-6R-kti">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="341"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-JZ-PK5">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fire" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-JZ-PK5">
                                                         <rect key="frame" x="125" y="0.0" width="125" height="341"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character2" translatesAutoresizingMaskIntoConstraints="NO" id="2Mq-RP-IqK">
@@ -123,9 +123,9 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-7g-VqG">
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
-                                                        <state key="normal" title="Fire" backgroundImage="download">
+                                                        <state key="normal" title="Attack" backgroundImage="download">
                                                             <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -135,9 +135,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="OmJ-P7-ljR">
                                                         <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
-                                                        <state key="normal" title="Water" backgroundImage="download">
+                                                        <state key="normal" title="Chad Attack" backgroundImage="download">
                                                             <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -153,8 +153,8 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="Afi-GB-4d6">
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <state key="normal" title="Healing" backgroundImage="download">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Alpha Chad Attack" backgroundImage="download">
                                                             <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -163,8 +163,8 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haU-z2-qW5">
                                                         <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <state key="normal" title="Earth" backgroundImage="download"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="Heal" backgroundImage="download"/>
                                                         <connections>
                                                             <action selector="spell4:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UZw-Gl-42u"/>
                                                         </connections>
@@ -232,6 +232,6 @@
         <image name="character1" width="1920" height="1080"/>
         <image name="character2" width="1920" height="1080"/>
         <image name="download" width="275" height="183"/>
-        <image name="water" width="400" height="700"/>
+        <image name="fire" width="512" height="512"/>
     </resources>
 </document>
