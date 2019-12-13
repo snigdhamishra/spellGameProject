@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MGZ-Hh-JbZ" userLabel="Upper">
                                 <rect key="frame" x="0.0" y="4" width="375" height="43"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-Jj-CS2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-Jj-CS2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="qQR-fi-SgH">
@@ -45,10 +46,10 @@
                                                 <viewLayoutGuide key="safeArea" id="xxN-Bq-5ce"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Cmv-MZ-Cs0">
-                                                <rect key="frame" x="0.0" y="22.5" width="375" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="375" height="17.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mft-Dh-J4b">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="17.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -56,7 +57,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a1L-8W-tF1">
-                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="20.5"/>
+                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="17.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -81,7 +82,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-6R-kti">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="341"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-JZ-PK5">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-JZ-PK5">
                                                         <rect key="frame" x="125" y="0.0" width="125" height="341"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Mq-RP-IqK">
@@ -108,32 +109,35 @@
                                                 <rect key="contentStretch" x="1" y="1" width="0.90000000000000002" height="1"/>
                                                 <viewLayoutGuide key="safeArea" id="TB9-4m-Haj"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="Ta2-04-8d0">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" id="Ta2-04-8d0">
                                                 <rect key="frame" x="0.0" y="89" width="375" height="89"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-7g-VqG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <state key="normal" title="Spell #1"/>
+                                                        <connections>
+                                                            <action selector="spell1:" destination="BV1-FR-VrT" eventType="touchUpInside" id="p33-CV-wOD"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OmJ-P7-ljR">
-                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="89"/>
+                                                        <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Spell #2"/>
                                                     </button>
                                                 </subviews>
                                                 <viewLayoutGuide key="safeArea" id="P4r-k4-dyh"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-ye-DGD">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-ye-DGD">
                                                 <rect key="frame" x="0.0" y="178" width="375" height="89"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Afi-GB-4d6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Spell #3"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haU-z2-qW5">
-                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="89"/>
+                                                        <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
                                                         <state key="normal" title="Spell #4"/>
                                                     </button>
                                                 </subviews>
@@ -187,4 +191,7 @@
             <point key="canvasLocation" x="132" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="character1" width="1920" height="1080"/>
+    </resources>
 </document>
