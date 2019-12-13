@@ -15,8 +15,8 @@ class GameViewController: UIViewController {
     @IBOutlet var playerEnergy: UILabel!
     @IBOutlet var enemyHealth: UILabel!
     @IBOutlet var enemyEnergy: UILabel!
-    var enemy = Character(health: 100, energy: 100, attackDamage: 10)
-    var player = Character(health: 100, energy: 100, attackDamage: 10)
+    var enemy = Enemy(health: 100, energy: 100)
+    var player = Hero(health: 100, energy: 100)
     override func viewDidLoad() {
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
