@@ -44,32 +44,46 @@ class GameViewController: UIViewController {
     
     
     @IBAction func spell1(_ sender: Any) {
-        enemy.health -= 10
-        player.energy -= 20
+        if (player.energy > 0)
+        {
+            enemy.health -= 10
+            player.energy -= 30
+        }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
     }
     @IBAction func spell2(_ sender: Any) {
-        enemy.health -= 20
-        player.energy -= 50
+        var damage = Int.random(in: 1...20)
+        if (player.energy >= 20)
+        {
+            enemy.health -= damage
+            player.energy -= 15
+        }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
     }
     @IBAction func spell3(_ sender: Any) {
-        enemy.health -= 20
-        player.energy -= 50
+        var damage = Int.random(in: 1...100)
+        if (player.energy == 100)
+        {
+            enemy.health -= damage
+            player.energy -= 100
+        }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
     }
     @IBAction func spell4(_ sender: Any) {
-        enemy.health -= 20
-        player.energy -= 50
+        if (player.energy > 0)
+        {
+            player.health += 10
+            player.energy -= 20
+        }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
