@@ -117,13 +117,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <state key="normal" title="Spell #1"/>
                                                         <connections>
-                                                            <action selector="spell1:" destination="BV1-FR-VrT" eventType="touchUpInside" id="p33-CV-wOD"/>
+                                                            <action selector="spell1:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lar-7h-qzk"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OmJ-P7-ljR">
                                                         <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Spell #2"/>
+                                                        <connections>
+                                                            <action selector="spell2:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1FW-Rq-h8Z"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <viewLayoutGuide key="safeArea" id="P4r-k4-dyh"/>
@@ -135,10 +138,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Spell #3"/>
+                                                        <connections>
+                                                            <action selector="spell3:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nIv-Hs-6cM"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haU-z2-qW5">
                                                         <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
                                                         <state key="normal" title="Spell #4"/>
+                                                        <connections>
+                                                            <action selector="spell4:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UZw-Gl-42u"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -164,6 +173,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <outlet property="enemyEnergy" destination="a1L-8W-tF1" id="vXj-xL-j86"/>
+                        <outlet property="enemyHealth" destination="iPY-MW-Nb4" id="xAZ-zk-p4f"/>
+                        <outlet property="playerEnergy" destination="mft-Dh-J4b" id="zeE-wE-Oin"/>
+                        <outlet property="playerHealth" destination="0BV-2p-pKP" id="5LR-7H-YPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="IWF-HF-Pm6">
