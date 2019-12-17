@@ -20,6 +20,7 @@ class GameViewController: UIViewController {
     var turn = true
     var enemy = Enemy(health: 100, energy: 100)
     var player = Hero(health: 100, energy: 100)
+    var wonCounter = 0
     override func viewDidLoad() {
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -61,6 +62,10 @@ class GameViewController: UIViewController {
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
+        if (enemy.health <= 0)
+        {
+            
+        }
         enemyTurn()
     }
     @IBAction func spell2(_ sender: Any) {
@@ -180,6 +185,13 @@ class GameViewController: UIViewController {
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
         turn = true
+    }
+    func superEnemy()
+    {
+        wonCounter += 1
+        enemy.health += 150 * wonCounter
+        enemy.energy += wonCounter * 150
+        player.energy += 150
     }
     override var shouldAutorotate: Bool {
         return true
