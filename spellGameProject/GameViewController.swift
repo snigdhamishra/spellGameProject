@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet var turnDescription: UILabel!
     @IBOutlet var enemyHealth: UILabel!
     @IBOutlet var enemyEnergy: UILabel!
+    var count = 0
     var turn = true
     var enemy = Enemy(health: 100, energy: 100)
     var player = Hero(health: 100, energy: 100)
@@ -192,6 +193,11 @@ class GameViewController: UIViewController {
         enemy.health += 150 * wonCounter
         enemy.energy += wonCounter * 150
         player.energy += 150
+    func energyRegenPlayer() {
+        player.energy += 10
+    }
+    func energyRegenEnemy() {
+        enemy.energy += 10
     }
     override var shouldAutorotate: Bool {
         return true
