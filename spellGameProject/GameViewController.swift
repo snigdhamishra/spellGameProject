@@ -91,7 +91,7 @@ class GameViewController: UIViewController {
     @IBAction func spell3(_ sender: Any) {
         turn = false
         var damage = Int.random(in: 1...100)
-        if (player.energy == 100)
+        if (player.energy >= 100)
         {
             enemy.health -= damage
             player.energy -= 100
@@ -138,6 +138,7 @@ class GameViewController: UIViewController {
             }
             else
             {
+                enemy.energy = 0
                 turnDescription.text = "The enemy tried to attack the player but failed!"
             }
         }
@@ -151,6 +152,7 @@ class GameViewController: UIViewController {
             }
             else
             {
+                enemy.energy = 0
                 turnDescription.text = "The enemy tried to attack the player but failed!"
             }
         }
@@ -165,6 +167,7 @@ class GameViewController: UIViewController {
             }
             else
             {
+                enemy.energy = 0
                 turnDescription.text = "The enemy tried to attack the player but failed!"
             }
         }
@@ -178,6 +181,7 @@ class GameViewController: UIViewController {
             }
             else
             {
+                enemy.energy = 0
                 turnDescription.text = "The enemy tried to attack the player but failed!"
             }
         }
@@ -185,6 +189,7 @@ class GameViewController: UIViewController {
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
+        regen()
         turn = true
     }
     func superEnemy()
@@ -193,10 +198,9 @@ class GameViewController: UIViewController {
         enemy.health += 150 * wonCounter
         enemy.energy += wonCounter * 150
         player.energy += 150
-    func energyRegenPlayer() {
-        player.energy += 10
     }
-    func energyRegenEnemy() {
+    func regen() {
+        player.energy += 10
         enemy.energy += 10
     }
     override var shouldAutorotate: Bool {
