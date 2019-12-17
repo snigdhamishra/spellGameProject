@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,12 +15,12 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="spellGameProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MGZ-Hh-JbZ" userLabel="Upper">
-                                <rect key="frame" x="0.0" y="4" width="375" height="43"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="43"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-Jj-CS2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -71,7 +73,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dQz-ln-cIm" userLabel="Middle">
-                                <rect key="frame" x="0.0" y="51" width="375" height="341"/>
+                                <rect key="frame" x="0.0" y="71" width="375" height="341"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h0J-X4-C1I">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="341"/>
@@ -90,6 +92,7 @@
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="2Mq-RP-IqK" firstAttribute="height" secondItem="fqj-6R-kti" secondAttribute="height" id="9Rm-a0-Ycf"/>
                                                     <constraint firstItem="2Mq-RP-IqK" firstAttribute="width" secondItem="fqj-6R-kti" secondAttribute="width" id="qx2-8H-zuw"/>
                                                 </constraints>
                                             </stackView>
@@ -98,7 +101,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Y4-lqc" userLabel="Lower">
-                                <rect key="frame" x="0.0" y="400" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="420" width="375" height="267"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-y5-Zx2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
@@ -126,7 +129,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
                                                         <state key="normal" title="Attack" backgroundImage="download">
-                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="spell1:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lar-7h-qzk"/>
@@ -138,7 +141,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
                                                         <state key="normal" title="Chad Attack" backgroundImage="download">
-                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="spell2:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1FW-Rq-h8Z"/>
@@ -155,7 +158,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Alpha Chad Attack" backgroundImage="download">
-                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="spell3:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nIv-Hs-6cM"/>
@@ -197,6 +200,7 @@
                         <outlet property="effect" destination="Ocs-JZ-PK5" id="SdV-Uq-aVS"/>
                         <outlet property="enemyEnergy" destination="a1L-8W-tF1" id="vXj-xL-j86"/>
                         <outlet property="enemyHealth" destination="iPY-MW-Nb4" id="xAZ-zk-p4f"/>
+                        <outlet property="enemyPhoto" destination="2Mq-RP-IqK" id="SfD-6C-w5m"/>
                         <outlet property="playerEnergy" destination="mft-Dh-J4b" id="zeE-wE-Oin"/>
                         <outlet property="playerHealth" destination="0BV-2p-pKP" id="5LR-7H-YPJ"/>
                         <outlet property="turnDescription" destination="dcj-Er-iKI" id="giE-cn-40J"/>

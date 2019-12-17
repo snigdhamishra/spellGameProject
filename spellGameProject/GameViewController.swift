@@ -17,6 +17,11 @@ class GameViewController: UIViewController {
     @IBOutlet var turnDescription: UILabel!
     @IBOutlet var enemyHealth: UILabel!
     @IBOutlet var enemyEnergy: UILabel!
+    
+    
+    @IBOutlet var enemyPhoto: UIImageView!
+    
+    
     var turn = true
     var enemy = Enemy(health: 100, energy: 100)
     var player = Hero(health: 100, energy: 100)
@@ -47,6 +52,7 @@ class GameViewController: UIViewController {
     
     @IBAction func spell1(_ sender: Any) {
         turn = false
+       
         if (player.energy > 0)
         {
             enemy.health -= 10
@@ -61,11 +67,13 @@ class GameViewController: UIViewController {
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
+        turnDescription.text = "You caused 10 damage to the Enemy!"
         enemyTurn()
+        //Thread.sleep(forTimeInterval: 1)
     }
     @IBAction func spell2(_ sender: Any) {
         turn = false
-        var damage = Int.random(in: 1...20)
+        let damage = Int.random(in: 1...20)
         if (player.energy >= 20)
         {
             enemy.health -= damage
@@ -80,11 +88,13 @@ class GameViewController: UIViewController {
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
+        turnDescription.text = "You caused \(damage) damage to the Enemy!"
         enemyTurn()
+        //Thread.sleep(forTimeInterval: 1)
     }
     @IBAction func spell3(_ sender: Any) {
         turn = false
-        var damage = Int.random(in: 1...100)
+        let damage = Int.random(in: 1...100)
         if (player.energy == 100)
         {
             enemy.health -= damage
@@ -99,7 +109,9 @@ class GameViewController: UIViewController {
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
+        turnDescription.text = "You caused \(damage) damage to the Enemy!"
         enemyTurn()
+        //Thread.sleep(forTimeInterval: 1)
     }
     @IBAction func spell4(_ sender: Any) {
         turn = false
@@ -117,13 +129,19 @@ class GameViewController: UIViewController {
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
+        turnDescription.text = "Your health healed by 10 points!"
         enemyTurn()
+        //Thread.sleep(forTimeInterval: 1)
     }
     func enemyTurn()
     {
+      
         let num = Int.random(in: 1...4)
+       
         if (num == 1)
         {
+            let image: UIImage = UIImage(named: "enemy1")!
+            enemyPhoto = UIImageView(image: image)
             if (enemy.energy >= 30)
             {
                 player.health -= 10
@@ -137,11 +155,13 @@ class GameViewController: UIViewController {
         }
         else if (num == 2)
         {
+            let image: UIImage = UIImage(named: "enemy2")!
+            enemyPhoto = UIImageView(image: image)
             if (enemy.energy >= 30)
             {
                 player.health -= 30
                 enemy.energy -= 60
-                turnDescription.text = "The enemy attacked the player for 30 damage!"
+               turnDescription.text = "The enemy attacked the player for 30 damage!"
             }
             else
             {
@@ -150,16 +170,18 @@ class GameViewController: UIViewController {
         }
         else if (num == 3)
         {
+            let image: UIImage = UIImage(named: "enemy3")!
+            enemyPhoto = UIImageView(image: image)
             if (enemy.energy >= 50)
             {
                 enemy.health = (enemy.health + player.health)/2
                 player.health = enemy.health
                 enemy.energy -= 50
-                turnDescription.text = "Enemy used pain split!"
+               turnDescription.text = "Enemy used pain split!"
             }
             else
             {
-                turnDescription.text = "The enemy tried to attack the player but failed!"
+               turnDescription.text = "The enemy tried to attack the player but failed!"
             }
         }
         else if (num == 4)
@@ -172,7 +194,7 @@ class GameViewController: UIViewController {
             }
             else
             {
-                turnDescription.text = "The enemy tried to attack the player but failed!"
+              turnDescription.text = "The enemy tried to attack the player but failed!"
             }
         }
         playerHealth.text = "\(player.health)"
@@ -180,7 +202,9 @@ class GameViewController: UIViewController {
         enemyHealth.text = "\(enemy.health)"
         enemyEnergy.text = "\(enemy.energy)"
         turn = true
+        
     }
+    
     override var shouldAutorotate: Bool {
         return true
     }
