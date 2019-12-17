@@ -124,24 +124,56 @@ class GameViewController: UIViewController {
         let num = Int.random(in: 1...4)
         if (num == 1)
         {
-            player.health -= 10
-            enemy.energy -= 30
+            if (enemy.energy >= 30)
+            {
+                player.health -= 10
+                enemy.energy -= 30
+                turnDescription.text = "The enemy attacked the player for 10 damage!"
+            }
+            else
+            {
+                turnDescription.text = "The enemy tried to attack the player but failed!"
+            }
         }
         else if (num == 2)
         {
-            player.health -= 30
-            enemy.energy -= 60
+            if (enemy.energy >= 30)
+            {
+                player.health -= 30
+                enemy.energy -= 60
+                turnDescription.text = "The enemy attacked the player for 30 damage!"
+            }
+            else
+            {
+                turnDescription.text = "The enemy tried to attack the player but failed!"
+            }
         }
         else if (num == 3)
         {
-            enemy.health = (enemy.health + player.health)/2
-            player.health = enemy.health
-            enemy.energy -= 50
+            if (enemy.energy >= 50)
+            {
+                enemy.health = (enemy.health + player.health)/2
+                player.health = enemy.health
+                enemy.energy -= 50
+                turnDescription.text = "Enemy used pain split!"
+            }
+            else
+            {
+                turnDescription.text = "The enemy tried to attack the player but failed!"
+            }
         }
         else if (num == 4)
         {
-            enemy.health += 30
-            enemy.energy -= 50
+            if (enemy.energy >= 40)
+            {
+                enemy.health += 30
+                enemy.energy -= 50
+                turnDescription.text = "Enemy healed 30 health!"
+            }
+            else
+            {
+                turnDescription.text = "The enemy tried to attack the player but failed!"
+            }
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
