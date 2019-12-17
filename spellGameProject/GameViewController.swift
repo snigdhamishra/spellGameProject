@@ -11,6 +11,7 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    @IBOutlet var playerImage: UIImageView!
     @IBOutlet var effect: UIImageView!
     @IBOutlet var playerHealth: UILabel!
     @IBOutlet var playerEnergy: UILabel!
@@ -216,9 +217,8 @@ class GameViewController: UIViewController {
         {
             if (enemy.energy >= 50)
             {
-                enemy.health = (enemy.health + player.health)/2
-                player.health = enemy.health
-                enemy.energy -= 50
+                player.health -= 50
+                enemy.energy -= 100
                 turnDescription.text = "Enemy used pain split!"
             }
             else
@@ -247,6 +247,11 @@ class GameViewController: UIViewController {
                     enemy.energy = 0
                 }
         }
+        if (player.health <= 0)
+        {
+            player.health = 0
+            playerDead()
+        }
         regen()
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -270,6 +275,9 @@ class GameViewController: UIViewController {
     }
     func playerDead()
     {
+        playerTurn.text = ""
+        turnDescription.text = "Game Over"
+        playerImage.image = UIImage(named: "download")
         
     }
     override var shouldAutorotate: Bool {
