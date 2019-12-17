@@ -23,6 +23,7 @@ class GameViewController: UIViewController {
     var enemy = Character(health: 100, energy: 100)
     var player = Character(health: 100, energy: 100)
     var wonCounter = 0
+    var justDefeated = false
     override func viewDidLoad() {
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -48,12 +49,12 @@ class GameViewController: UIViewController {
     }
 
     
-    @IBAction func spell1(_ sender: Any) {
+    @IBAction func spell1(_ sender: UIButton) {
         turn = false
-        if (player.energy >= 30)
+        if (player.energy >= 10)
         {
-            enemy.health -= 10
-            player.energy -= 30
+            enemy.health -= 20
+            player.energy -= 10
             effect.image = UIImage(named: "earth")
             playerTurn.text = "The player attacked the enemy for 10 damage!"
             if (enemy.health <= 0)
@@ -79,13 +80,13 @@ class GameViewController: UIViewController {
         }
         enemyTurn()
     }
-    @IBAction func spell2(_ sender: Any) {
+    @IBAction func spell2(_ sender: UIButton) {
         turn = false
-        var damage = Int.random(in: 1...20)
-        if (player.energy >= 10)
+        var damage = Int.random(in: 1...50)
+        if (player.energy >= 30)
         {
             enemy.health -= damage
-            player.energy -= 10
+            player.energy -= 30
             if (player.energy < 0)
             {
                 player.energy = 0
@@ -111,9 +112,9 @@ class GameViewController: UIViewController {
         enemyEnergy.text = "\(enemy.energy)"
         enemyTurn()
     }
-    @IBAction func spell3(_ sender: Any) {
+    @IBAction func spell3(_ sender: UIButton) {
         turn = false
-        var damage = Int.random(in: 1...100)
+        var damage = Int.random(in: 1...200)
         if (player.energy >= 100)
         {
             enemy.health -= damage
@@ -143,12 +144,12 @@ class GameViewController: UIViewController {
         enemyEnergy.text = "\(enemy.energy)"
         enemyTurn()
     }
-    @IBAction func spell4(_ sender: Any) {
+    @IBAction func spell4(_ sender: UIButton) {
         turn = false
         if (player.energy > 0)
         {
             player.health += 30
-            player.energy -= 20
+            player.energy -= 30
             if (player.energy < 0)
             {
                 player.energy = 0
@@ -261,10 +262,15 @@ class GameViewController: UIViewController {
         player.health += 50
         player.energy += 150
         turnDescription.text = "Enemy #\(wonCounter) has been slain. Enemy #\(wonCounter += 1) has appeared"
+        justDefeated = true
     }
     func regen() {
-        player.energy += 10
-        enemy.energy += 10
+        player.energy += 10 + (10 * wonCounter)
+        enemy.energy += 10 + (10 * wonCounter)
+    }
+    func playerDead()
+    {
+        
     }
     override var shouldAutorotate: Bool {
         return true
