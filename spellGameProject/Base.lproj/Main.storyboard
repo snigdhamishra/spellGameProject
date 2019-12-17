@@ -13,7 +13,7 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="spellGameProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -98,31 +98,35 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Y4-lqc" userLabel="Lower">
-                                <rect key="frame" x="0.0" y="400" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="400" width="375" height="270"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-y5-Zx2">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="Vsd-xW-kJE">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aFe-X2-KLA">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="36U-L9-vAr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcj-Er-iKI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                                        <rect key="frame" x="0.0" y="45" width="375" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <rect key="contentStretch" x="1" y="1" width="0.90000000000000002" height="1"/>
-                                                <viewLayoutGuide key="safeArea" id="TB9-4m-Haj"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" id="Ta2-04-8d0">
-                                                <rect key="frame" x="0.0" y="89" width="375" height="89"/>
+                                                <rect key="frame" x="0.0" y="90" width="375" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-7g-VqG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="90"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
                                                         <state key="normal" title="Attack" backgroundImage="download">
@@ -133,7 +137,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="OmJ-P7-ljR">
-                                                        <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
+                                                        <rect key="frame" x="191.5" y="0.0" width="183.5" height="90"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <size key="titleShadowOffset" width="1" height="0.0"/>
@@ -148,10 +152,10 @@
                                                 <viewLayoutGuide key="safeArea" id="P4r-k4-dyh"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-ye-DGD">
-                                                <rect key="frame" x="0.0" y="178" width="375" height="89"/>
+                                                <rect key="frame" x="0.0" y="180" width="375" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="Afi-GB-4d6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="90"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Alpha Chad Attack" backgroundImage="download">
@@ -162,7 +166,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haU-z2-qW5">
-                                                        <rect key="frame" x="191.5" y="0.0" width="183.5" height="89"/>
+                                                        <rect key="frame" x="191.5" y="0.0" width="183.5" height="90"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Heal" backgroundImage="download"/>
                                                         <connections>
@@ -199,6 +203,7 @@
                         <outlet property="enemyHealth" destination="iPY-MW-Nb4" id="xAZ-zk-p4f"/>
                         <outlet property="playerEnergy" destination="mft-Dh-J4b" id="zeE-wE-Oin"/>
                         <outlet property="playerHealth" destination="0BV-2p-pKP" id="5LR-7H-YPJ"/>
+                        <outlet property="playerTurn" destination="36U-L9-vAr" id="qTc-qD-K3O"/>
                         <outlet property="turnDescription" destination="dcj-Er-iKI" id="giE-cn-40J"/>
                     </connections>
                 </viewController>

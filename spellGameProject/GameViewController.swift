@@ -15,12 +15,13 @@ class GameViewController: UIViewController {
     @IBOutlet var playerHealth: UILabel!
     @IBOutlet var playerEnergy: UILabel!
     @IBOutlet var turnDescription: UILabel!
+    @IBOutlet var playerTurn: UILabel!
     @IBOutlet var enemyHealth: UILabel!
     @IBOutlet var enemyEnergy: UILabel!
     var count = 0
     var turn = true
-    var enemy = Enemy(health: 100, energy: 100)
-    var player = Hero(health: 100, energy: 100)
+    var enemy = Character(health: 100, energy: 100)
+    var player = Character(health: 100, energy: 100)
     var wonCounter = 0
     override func viewDidLoad() {
         playerHealth.text = "\(player.health)"
@@ -49,15 +50,20 @@ class GameViewController: UIViewController {
     
     @IBAction func spell1(_ sender: Any) {
         turn = false
-        if (player.energy > 0)
+        if (player.energy >= 30)
         {
             enemy.health -= 10
             player.energy -= 30
-            if (player.energy < 0)
-            {
-                player.energy = 0
-            }
             effect.image = UIImage(named: "earth")
+            playerTurn.text = "The player attacked the enemy for 10 damage!"
+        }
+        else
+        {
+            playerTurn.text = "The player tried to attack the enemy but failed!"
+        }
+        if (player.energy <= 0)
+        {
+            player.energy = 0
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -81,6 +87,15 @@ class GameViewController: UIViewController {
                 player.energy = 0
             }
             effect.image = UIImage(named: "water")
+            playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+        }
+        else
+        {
+            playerTurn.text = "The player tried to attack the enemy but failed!"
+        }
+        if (player.energy <= 0)
+        {
+            player.energy = 0
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -100,6 +115,15 @@ class GameViewController: UIViewController {
                 player.energy = 0
             }
             effect.image = UIImage(named: "alphacChadMove")
+        playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+        }
+        else
+        {
+            playerTurn.text = "The player tried to attack the enemy but failed!"
+        }
+        if (player.energy <= 0)
+        {
+            player.energy = 0
         }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -118,7 +142,16 @@ class GameViewController: UIViewController {
                 player.energy = 0
             }
             effect.image = UIImage(named: "healing")
+        playerTurn.text = "The player healed 10 health!"
+            }
+        else
+        {
+            playerTurn.text = "The player tried to heal but failed!"
         }
+            if (player.energy <= 0)
+            {
+                player.energy = 0
+            }
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
         enemyHealth.text = "\(enemy.health)"
@@ -182,7 +215,7 @@ class GameViewController: UIViewController {
             else
             {
                 enemy.energy = 0
-                turnDescription.text = "The enemy tried to attack the player but failed!"
+                turnDescription.text = "The enemy tried to heal but failed!"
             }
         }
         playerHealth.text = "\(player.health)"
