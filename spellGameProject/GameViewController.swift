@@ -55,7 +55,7 @@ class GameViewController: UIViewController {
         turn = false
         if (dead == true)
         {
-            sender.isEnabled = true
+            sender.isEnabled = false
         }
         else if (player.energy >= 10)
         {
@@ -91,7 +91,7 @@ class GameViewController: UIViewController {
         var damage = Int.random(in: 1...50)
         if (dead == true)
         {
-            sender.isEnabled = true
+            sender.isEnabled = false
         }
         else if (player.energy >= 30)
         {
@@ -127,7 +127,7 @@ class GameViewController: UIViewController {
         var damage = Int.random(in: 1...200)
         if (dead == true)
         {
-            sender.isEnabled = true
+            sender.isEnabled = false
         }
         else if (player.energy >= 100)
         {
@@ -162,7 +162,7 @@ class GameViewController: UIViewController {
         turn = false
         if (dead == true)
         {
-            sender.isEnabled = true
+            sender.isEnabled = false
         }
         else if (player.energy > 0)
         {
@@ -293,6 +293,7 @@ class GameViewController: UIViewController {
     func playerDead()
     {
         playerTurn.text = ""
+        player.energy = 0
         turnDescription.text = "Game Over"
         playerImage.image = UIImage(named: "download")
         dead = true
