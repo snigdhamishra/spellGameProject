@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
     var player = Character(health: 100, energy: 100)
     var wonCounter = 0
     var justDefeated = false
+    var dead = false
     override func viewDidLoad() {
         playerHealth.text = "\(player.health)"
         playerEnergy.text = "\(player.energy)"
@@ -52,7 +53,11 @@ class GameViewController: UIViewController {
     
     @IBAction func spell1(_ sender: UIButton) {
         turn = false
-        if (player.energy >= 10)
+        if (dead == true)
+        {
+            sender.isEnabled = true
+        }
+        else if (player.energy >= 10)
         {
             enemy.health -= 20
             player.energy -= 10
@@ -84,7 +89,11 @@ class GameViewController: UIViewController {
     @IBAction func spell2(_ sender: UIButton) {
         turn = false
         var damage = Int.random(in: 1...50)
-        if (player.energy >= 30)
+        if (dead == true)
+        {
+            sender.isEnabled = true
+        }
+        else if (player.energy >= 30)
         {
             enemy.health -= damage
             player.energy -= 30
@@ -116,7 +125,11 @@ class GameViewController: UIViewController {
     @IBAction func spell3(_ sender: UIButton) {
         turn = false
         var damage = Int.random(in: 1...200)
-        if (player.energy >= 100)
+        if (dead == true)
+        {
+            sender.isEnabled = true
+        }
+        else if (player.energy >= 100)
         {
             enemy.health -= damage
             player.energy -= 100
@@ -147,7 +160,11 @@ class GameViewController: UIViewController {
     }
     @IBAction func spell4(_ sender: UIButton) {
         turn = false
-        if (player.energy > 0)
+        if (dead == true)
+        {
+            sender.isEnabled = true
+        }
+        else if (player.energy > 0)
         {
             player.health += 30
             player.energy -= 30
@@ -278,6 +295,7 @@ class GameViewController: UIViewController {
         playerTurn.text = ""
         turnDescription.text = "Game Over"
         playerImage.image = UIImage(named: "download")
+        dead = true
         
     }
     override var shouldAutorotate: Bool {
