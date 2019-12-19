@@ -66,6 +66,7 @@ class GameViewController: UIViewController {
             if (enemy.health <= 0)
             {
                 superEnemy()
+                
             }
         }
         else
@@ -236,7 +237,7 @@ class GameViewController: UIViewController {
             {
                 player.health -= 50
                 enemy.energy -= 100
-                turnDescription.text = "Enemy used pain split!"
+                turnDescription.text = "The enemy attacked the player for 50 damage!"
             }
             else
             {
@@ -283,7 +284,7 @@ class GameViewController: UIViewController {
         enemy.energy += wonCounter * 150
         player.health += 50
         player.energy += 150
-        turnDescription.text = "Enemy #\(wonCounter) has been slain. Enemy #\(wonCounter += 1) has appeared"
+        playerTurn.text = "Enemy #\(wonCounter) has been slain. A new one appeared!"
         justDefeated = true
     }
     func regen() {
