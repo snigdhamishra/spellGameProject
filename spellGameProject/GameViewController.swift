@@ -233,11 +233,12 @@ class GameViewController: UIViewController {
         }
         else if (num == 3)
         {
-            if (enemy.energy >= 50)
+            if (enemy.energy >= 1)
             {
-                player.health -= 50
-                enemy.energy -= 100
-                turnDescription.text = "The enemy attacked the player for 50 damage!"
+                player.health -= enemy.energy/5
+                var dam = enemy.energy/5
+                enemy.energy = 0
+                turnDescription.text = "The enemy attacked the player for \(dam) damage!"
             }
             else
             {
