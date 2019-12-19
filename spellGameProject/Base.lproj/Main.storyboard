@@ -217,6 +217,7 @@
                         <outlet property="enemyHealth" destination="iPY-MW-Nb4" id="xAZ-zk-p4f"/>
                         <outlet property="playerEnergy" destination="mft-Dh-J4b" id="zeE-wE-Oin"/>
                         <outlet property="playerHealth" destination="0BV-2p-pKP" id="5LR-7H-YPJ"/>
+                        <outlet property="playerImage" destination="fqj-6R-kti" id="m7i-ua-50L"/>
                         <outlet property="playerTurn" destination="36U-L9-vAr" id="qTc-qD-K3O"/>
                         <outlet property="turnDescription" destination="dcj-Er-iKI" id="giE-cn-40J"/>
                     </connections>
