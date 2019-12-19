@@ -59,10 +59,10 @@ class GameViewController: UIViewController {
         }
         else if (player.energy >= 10)
         {
-            enemy.health -= 20
+            enemy.health -= 20 + 20 * wonCounter
             player.energy -= 10
             effect.image = UIImage(named: "earth")
-            playerTurn.text = "The player attacked the enemy for 10 damage!"
+            playerTurn.text = "The player attacked the enemy for \(20 + 10 * wonCounter) damage!"
             if (enemy.health <= 0)
             {
                 superEnemy()
@@ -96,14 +96,14 @@ class GameViewController: UIViewController {
         }
         else if (player.energy >= 30)
         {
-            enemy.health -= damage
+            enemy.health -= damage + damage/2 * wonCounter
             player.energy -= 30
             if (player.energy < 0)
             {
                 player.energy = 0
             }
             effect.image = UIImage(named: "water")
-            playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+            playerTurn.text = "The player attacked the enemy for \(damage + damage/2 * wonCounter) damage!"
             if (enemy.health <= 0)
             {
                 superEnemy()
@@ -132,14 +132,14 @@ class GameViewController: UIViewController {
         }
         else if (player.energy >= 100)
         {
-            enemy.health -= damage
-            player.energy -= 100
+            enemy.health -= damage + damage/2 * wonCounter
+            player.energy = 0
             if (player.energy < 0)
             {
                 player.energy = 0
             }
             effect.image = UIImage(named: "alphacChadMove")
-        playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+        playerTurn.text = "The player attacked the enemy for \(damage + damage/2 * wonCounter) damage!"
             if (enemy.health <= 0)
             {
                 superEnemy()
@@ -167,14 +167,14 @@ class GameViewController: UIViewController {
         }
         else if (player.energy > 0)
         {
-            player.health += 30
+            player.health += 30 + 30 * wonCounter
             player.energy -= 30
             if (player.energy < 0)
             {
                 player.energy = 0
             }
             effect.image = UIImage(named: "healing")
-        playerTurn.text = "The player healed 10 health!"
+        playerTurn.text = "The player healed \(30 + 30 * wonCounter) health!"
             if (enemy.health <= 0)
             {
                 superEnemy()
