@@ -77,10 +77,7 @@ class GameViewController: UIViewController {
         {
             player.energy = 0
         }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+        
         if (enemy.health <= 0)
         {
             
@@ -89,7 +86,7 @@ class GameViewController: UIViewController {
     }
     @IBAction func spell2(_ sender: UIButton) {
         turn = false
-        var damage = Int.random(in: 1...50)
+        let damage = Int.random(in: 1...50)
         if (dead == true)
         {
             sender.isEnabled = false
@@ -117,15 +114,12 @@ class GameViewController: UIViewController {
         {
             player.energy = 0
         }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+       
         enemyTurn()
     }
     @IBAction func spell3(_ sender: UIButton) {
         turn = false
-        var damage = Int.random(in: 1...200)
+        let damage = Int.random(in: 1...200)
         if (dead == true)
         {
             sender.isEnabled = false
@@ -153,10 +147,7 @@ class GameViewController: UIViewController {
         {
             player.energy = 0
         }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+        
         enemyTurn()
     }
     @IBAction func spell4(_ sender: UIButton) {
@@ -188,10 +179,7 @@ class GameViewController: UIViewController {
             {
                 player.energy = 0
             }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+        
         enemyTurn()
     }
     func enemyTurn()
@@ -236,7 +224,7 @@ class GameViewController: UIViewController {
             if (enemy.energy >= 1)
             {
                 player.health -= enemy.energy/5
-                var dam = enemy.energy/5
+                let dam = enemy.energy/5
                 enemy.energy = 0
                 turnDescription.text = "The enemy attacked the player for \(dam) damage!"
             }
@@ -253,9 +241,10 @@ class GameViewController: UIViewController {
         {
             if (enemy.energy >= 40)
             {
+                
                 enemy.health += 10
                 enemy.energy -= 50
-                turnDescription.text = "Enemy healed 30 health!"
+                turnDescription.text = "Enemy healed 10 health!"
             }
                 else
                 {
@@ -271,12 +260,14 @@ class GameViewController: UIViewController {
             player.health = 0
             playerDead()
         }
+        
+        playerHealth.text = "\(player.health) Health"
+        playerEnergy.text = "\(player.energy) Energy"
+        enemyHealth.text = "\(enemy.health) Health"
+        enemyEnergy.text = "\(enemy.energy) Energy"
         regen()
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
         turn = true
+        
     }
     func superEnemy()
     {
