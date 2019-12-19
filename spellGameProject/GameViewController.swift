@@ -1,4 +1,4 @@
-//
+                               //
 //  GameViewController.swift
 //  spellGameProject
 //
@@ -295,6 +295,7 @@ class GameViewController: UIViewController {
         playerTurn.text = ""
         player.energy = 0
         turnDescription.text = "Game Over"
+        playerTurn.text = "Number of enemies defeated: \(wonCounter)"
         playerImage.image = UIImage(named: "download")
         dead = true
         
