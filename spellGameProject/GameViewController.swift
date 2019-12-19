@@ -24,10 +24,10 @@ class GameViewController: UIViewController {
     var player = Character(health: 100, energy: 100)
     var wonCounter = 0
     override func viewDidLoad() {
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+        playerHealth.text = "\(player.health) Health"
+        playerEnergy.text = "\(player.energy) Energy"
+        enemyHealth.text = "\(enemy.health) Health"
+        enemyEnergy.text = "\(enemy.energy) Energy"
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
@@ -50,101 +50,103 @@ class GameViewController: UIViewController {
     
     @IBAction func spell1(_ sender: Any) {
         turn = false
-        if (player.energy >= 30)
-        {
-            enemy.health -= 10
-            player.energy -= 30
-            effect.image = UIImage(named: "earth")
-            playerTurn.text = "The player attacked the enemy for 10 damage!"
-            if (enemy.health <= 0)
+        
+        if (player.health > 0){
+            if (player.energy >= 30)
             {
-                superEnemy()
+                enemy.health -= 10
+                player.energy -= 30
+                effect.image = UIImage(named: "earth")
+                playerTurn.text = "The player attacked the enemy for 10 damage!"
+                if (enemy.health <= 0)
+                {
+                    superEnemy()
+                }
             }
-        }
-        else
-        {
-            playerTurn.text = "The player tried to attack the enemy but failed!"
-        }
-        if (player.energy <= 0)
-        {
-            player.energy = 0
-        }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
-        if (enemy.health <= 0)
-        {
-            
-        }
-        enemyTurn()
-    }
-    @IBAction func spell2(_ sender: Any) {
-        turn = false
-        var damage = Int.random(in: 1...20)
-        if (player.energy >= 10)
-        {
-            enemy.health -= damage
-            player.energy -= 10
-            if (player.energy < 0)
+            else
+            {
+                playerTurn.text = "The player tried to attack the enemy but failed!"
+            }
+            if (player.energy <= 0)
             {
                 player.energy = 0
             }
-            effect.image = UIImage(named: "water")
-            playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+            
             if (enemy.health <= 0)
             {
-                superEnemy()
+                
             }
         }
-        else
-        {
-            playerTurn.text = "The player tried to attack the enemy but failed!"
+            enemyTurn()
+    }
+    
+    @IBAction func spell2(_ sender: Any) {
+        turn = false
+        let damage = Int.random(in: 1...20)
+        if (player.health > 0) {
+            if (player.energy >= 10)
+            {
+                enemy.health -= damage
+                player.energy -= 10
+                if (player.energy < 0)
+                {
+                    player.energy = 0
+                }
+                effect.image = UIImage(named: "water")
+                playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+                if (enemy.health <= 0)
+                {
+                    superEnemy()
+                }
+            }
+            else
+            {
+                playerTurn.text = "The player tried to attack the enemy but failed!"
+            }
+            if (player.energy <= 0)
+            {
+                player.energy = 0
+            }
+         
         }
-        if (player.energy <= 0)
-        {
-            player.energy = 0
-        }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+        
         enemyTurn()
     }
     @IBAction func spell3(_ sender: Any) {
         turn = false
-        var damage = Int.random(in: 1...100)
-        if (player.energy >= 100)
-        {
-            enemy.health -= damage
-            player.energy -= 100
-            if (player.energy < 0)
+        let damage = Int.random(in: 1...100)
+        if player.health > 0 {
+            if (player.energy >= 100)
+            {
+                enemy.health -= damage
+                player.energy -= 100
+                if (player.energy < 0)
+                {
+                    player.energy = 0
+                }
+                effect.image = UIImage(named: "alphacChadMove")
+                playerTurn.text = "The player attacked the enemy for \(damage) damage!"
+                if (enemy.health <= 0)
+                {
+                    superEnemy()
+                }
+            }
+            else
+            {
+                playerTurn.text = "The player tried to attack the enemy but failed!"
+            }
+            if (player.energy <= 0)
             {
                 player.energy = 0
             }
-            effect.image = UIImage(named: "alphacChadMove")
-        playerTurn.text = "The player attacked the enemy for \(damage) damage!"
-            if (enemy.health <= 0)
-            {
-                superEnemy()
-            }
+         
         }
-        else
-        {
-            playerTurn.text = "The player tried to attack the enemy but failed!"
-        }
-        if (player.energy <= 0)
-        {
-            player.energy = 0
-        }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+       
         enemyTurn()
     }
     @IBAction func spell4(_ sender: Any) {
         turn = false
+        var healthHealed = Int.random(in: 5...50)
         if (player.energy > 0)
         {
             player.health += 30
@@ -168,10 +170,7 @@ class GameViewController: UIViewController {
             {
                 player.energy = 0
             }
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
+        
         enemyTurn()
     }
     func enemyTurn()
@@ -246,11 +245,12 @@ class GameViewController: UIViewController {
                     enemy.energy = 0
                 }
         }
+        
+        playerHealth.text = "\(player.health) Health"
+        playerEnergy.text = "\(player.energy) Energy"
+        enemyHealth.text = "\(enemy.health) Health"
+        enemyEnergy.text = "\(enemy.energy) Energy"
         regen()
-        playerHealth.text = "\(player.health)"
-        playerEnergy.text = "\(player.energy)"
-        enemyHealth.text = "\(enemy.health)"
-        enemyEnergy.text = "\(enemy.energy)"
         turn = true
     }
     func superEnemy()
